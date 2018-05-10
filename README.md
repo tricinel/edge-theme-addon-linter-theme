@@ -21,7 +21,28 @@ Activate the SublimeLinter gutter theme by modifying the plugin's preferences fi
 ![SublimeLinter Theme Activation][img-linter-activation]
 
 ```js
-"gutter_theme": "Packages/Edge Theme Addon - Linter Theme/Edge.gutter-theme",
+"gutter_theme": "Packages/Edge Theme Addon - Linter Theme/Edge.gutter-theme"
+```
+
+Starting with SublimeLinter 4, you also need to set the styles property:
+
+```js
+"styles": [
+    {
+      "mark_style": "outline",
+      "priority": 1,
+      "scope": "region.yellowish markup.warning.sublime_linter",
+      "icon": "Packages/Edge Theme Addon - Linter Theme/warning.png",
+      "types": ["warning"]
+    },
+    {
+      "mark_style": "outline",
+      "priority": 1,
+      "scope": "region.redish markup.error.sublime_linter",
+      "icon": "Packages/Edge Theme Addon - Linter Theme/error.png",
+      "types": ["error"]
+    }
+  ]
 ```
 
 <!-- Links -->
